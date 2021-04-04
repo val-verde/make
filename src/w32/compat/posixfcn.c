@@ -29,6 +29,7 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #ifndef NO_OUTPUT_SYNC
 /* Support for OUTPUT_SYNC and related functionality.  */
 
+#if 0
 /* Emulation of fcntl that supports only F_GETFD and F_SETLKW.  */
 int
 fcntl (intptr_t fd, int cmd, ...)
@@ -142,6 +143,7 @@ fcntl (intptr_t fd, int cmd, ...)
         return -1;
     }
 }
+#endif
 
 static intptr_t mutex_handle = -1;
 
