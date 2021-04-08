@@ -17,7 +17,7 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #ifndef _DIRENT_H
 #define _DIRENT_H
 
-#ifdef __MINGW32__
+#if defined(__MINGW32__) && !defined(__MINGW64__)
 # include <windows.h>
 # include_next <dirent.h>
 #else
