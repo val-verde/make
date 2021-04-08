@@ -459,6 +459,9 @@ dlclose (void *handle)
 
 /* MS runtime's isatty returns non-zero for any character device,
    including the null device, which is not what we want.  */
+#ifdef isatty
+#undef isatty
+#endif
 int
 isatty (int fd)
 {
