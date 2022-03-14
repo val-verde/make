@@ -442,7 +442,7 @@ w32_target_env=no
 AM_CONDITIONAL([WINDOWSENV], [false])
 
 AS_CASE([$host],
-  [*-*-mingw32],
+  [*-*-mingw*],
    [AM_CONDITIONAL([WINDOWSENV], [true])
     w32_target_env=yes
     AC_DEFINE([WINDOWS32], [1], [Use platform specific coding])
