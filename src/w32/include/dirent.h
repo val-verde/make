@@ -17,11 +17,6 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 #ifndef _DIRENT_H
 #define _DIRENT_H
 
-#if defined(__MINGW32__) && !defined(__MINGW64__)
-# include <windows.h>
-# include_next <dirent.h>
-#else
-
 #include <stdlib.h>
 #include <windows.h>
 #include <limits.h>
@@ -80,5 +75,4 @@ void rewinddir(DIR *);
 void closedir(DIR *);
 void seekdir(DIR *, long);
 
-#endif  /* !__MINGW32__ */
 #endif
